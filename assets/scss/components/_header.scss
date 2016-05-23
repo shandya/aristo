@@ -1,0 +1,74 @@
+.navbar-aristo {
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	border-radius: 0;
+
+	.navbar-brand {
+		padding: 0;
+	}
+
+	.logo-header {
+		height: 50px;
+	}
+
+	.navbar-toggle {
+		display: block;
+		float: left;
+	}
+
+	.navbar-toggle .icon-bar {
+		background: #4b4b4b;
+	}
+
+	.user-message {
+		color: $aristo-navy-blue;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	.user-avatar {
+		float: left;
+		height: 38px;
+		width: 38px;
+		margin: 6px 6px 6px 15px;
+		border-radius: 50%;
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	.navbar-link-icon {
+		height: 50px;
+		width: 50px;
+		display: inline-block;
+		margin: -15px 0px;
+	}
+
+	.navbar-link {
+		display: inline-block;
+		color: $aristo-navy-blue;
+		font-weight: 700;
+	}
+
+	.nav li + li {
+		border-left: 1px solid rgb(238, 238, 238);
+	}
+
+	.currency-control {
+		margin: 0px;
+		height: 50px;
+		padding: 9px 15px;
+		border-right: 1px solid rgb(238, 238, 238);
+
+		.form-control {
+			width: 12rem;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    text-indent: 1px;
+		    text-overflow: '';
+
+			&::-ms-expand {
+			    display: none;
+			}
+		}
+	}
+}

@@ -37,6 +37,54 @@ body {
     background: #d47616;
     color: white; }
 
+.navbar-aristo {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0; }
+  .navbar-aristo .navbar-brand {
+    padding: 0; }
+  .navbar-aristo .logo-header {
+    height: 50px; }
+  .navbar-aristo .navbar-toggle {
+    display: block;
+    float: left; }
+  .navbar-aristo .navbar-toggle .icon-bar {
+    background: #4b4b4b; }
+  .navbar-aristo .user-message {
+    color: #0a0236; }
+    .navbar-aristo .user-message span {
+      font-weight: 700; }
+  .navbar-aristo .user-avatar {
+    float: left;
+    height: 38px;
+    width: 38px;
+    margin: 6px 6px 6px 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+  .navbar-aristo .navbar-link-icon {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    margin: -15px 0px; }
+  .navbar-aristo .navbar-link {
+    display: inline-block;
+    color: #0a0236;
+    font-weight: 700; }
+  .navbar-aristo .nav li + li {
+    border-left: 1px solid #eeeeee; }
+  .navbar-aristo .currency-control {
+    margin: 0px;
+    height: 50px;
+    padding: 9px 15px;
+    border-right: 1px solid #eeeeee; }
+    .navbar-aristo .currency-control .form-control {
+      width: 12rem;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: ''; }
+      .navbar-aristo .currency-control .form-control::-ms-expand {
+        display: none; }
+
 .dashboard-sidebar {
   position: relative;
   width: 330px;
