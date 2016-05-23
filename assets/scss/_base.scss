@@ -1,0 +1,21 @@
+*:focus {
+    outline: 0;
+}
+
+html,
+body {
+	font-family: $base-font-family;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.responsive-break {
+	display: none;
+
+	@include breakpoint(small) {
+		display: block;
+	}	
+}

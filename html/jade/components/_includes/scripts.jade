@@ -1,0 +1,42 @@
+script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+script.
+	window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')
+script(src='../assets/javascripts/vendors/bootstrap.min.js')
+script(src='../assets/javascripts/vendors/slick/slick.min.js')
+script(src='../assets/javascripts/site.min.js')
+
+script.
+	 $(function() {
+			$('.docs-container').each(function() {
+				var $this = $(this);
+
+				var moduleHtml = $.trim($this.find('.module-wrapper').html());
+
+				$this.find('pre > code').text(moduleHtml).html();
+			}); 
+
+			$('.js-show-code').on('click', function(e) {
+				e.preventDefault();
+
+				var $this = $(this),
+						codeContainer = $this.next('.code-container');
+
+				if (codeContainer.hasClass('hide')) {
+					$this.text('Hide Code');
+				} else {
+					$this.text('Show Code');
+				}
+				codeContainer.toggleClass('hide');
+			});
+	});
+
+	$('#js-hotel-carousel').slick({
+		dots: false,
+		infinite: true,
+		slidesToShow: 4,
+		variableWidth: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+	});
+
+

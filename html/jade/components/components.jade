@@ -1,0 +1,57 @@
+doctype
+html(class="no-js", lang="en")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    block title
+      title Style Guide
+
+    link(rel='stylesheet', href='../assets/stylesheets/docs.css')
+    link(rel='stylesheet', href='../assets/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='../assets/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='../assets/stylesheets/site.css')
+    link(rel='stylesheet', href='../assets/stylesheets/vendors/prism.css')
+  body
+
+    header.docs-header
+      h1 Aristo
+      h2 Aristo style guide
+      p Managed by Shandy Ardiansyah
+
+    .container.docs-container
+      section
+        h3 Buttons
+        .module-wrapper
+          include modules/buttons.html
+
+        a.show-code.js-show-code(href="") Show Code
+        .code-container.hide
+          pre
+            code.lang-markup
+
+    .container.docs-container
+      section
+        h3 Dashboard Sidebar
+        .module-wrapper
+          include modules/dashboard-sidebar.html
+
+        a.show-code.js-show-code(href="") Show Code
+        .code-container.hide
+          pre
+            code.lang-markup
+
+
+    .container.docs-container
+      section
+        h3 Hotel Carousel
+        .module-wrapper
+          include modules/hotel-carousel.html
+
+        a.show-code.js-show-code(href="") Show Code
+        .code-container.hide
+          pre
+            code.lang-markup
+
+
+    include _includes/footer
+    include _includes/scripts

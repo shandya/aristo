@@ -1,0 +1,15 @@
+@import "variables";
+@import "utilities";
+@import "typography";
+
+/* @import "vendors/slick/slick"; */
+
+@import "base";
+
+@import "components/buttons";
+@import "components/header";
+@import "components/footer";
+@import "components/dashboard-sidebar";
+@import "components/hotel-carousel";
+
+@import "pages/index";

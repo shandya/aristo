@@ -1,0 +1,108 @@
+.dashboard-footer {
+	position: relative;
+	padding: 16px;
+	margin-top: 2px solid $aristo-gray;
+	box-shadow: 0 -8px 32px rgba(0,0,0,0.1);
+	background: #fafafa;
+
+	.section-header {
+		margin-bottom: 1rem;
+	}
+
+	.section-title {
+		text-transform: uppercase;
+
+		span {
+			text-transform: none;
+			font-weight: 400;
+		}
+
+		a {
+			color: $aristo-sky-blue;
+			margin-left: 1em;
+		}
+	}
+
+	.hotel-carousel {
+		position: relative;
+		list-style: none;
+		padding: 0;
+	}
+
+	.hotel-item-wrapper {
+		display: inline-block;
+		padding: 0 12px;
+		height: 80px;
+	}
+
+	.hotel-item {
+		display: inline-block;
+		position: relative;
+		width: 170px;
+		height: 80px;
+		background: white;
+		box-shadow: 0 0 2px rgba(0,0,0,0.2);
+		border-radius: 5px;
+		overflow: hidden;
+		cursor: pointer;
+
+		&.is-selected {
+			border: 2px solid $aristo-sky-blue;
+		}
+	}
+
+	.item-body {
+		padding: 9px;
+		float: left;
+		width: calc(100% - 50px);
+		height: 100%;
+	}
+
+	.item-title {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-size: 0.8em;
+	}
+
+	.text-start-from {
+		color: $aristo-gray-light;
+		margin: 0;
+		font-size: 0.8em;
+	}
+
+	.text-rate {
+		margin: 0;
+		font-weight: 700;
+		font-size: 0.8em;
+	}
+
+	.item-thumbnail {
+		width: 50px;
+		height: 100%;
+		float: right;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.slick-arrow {
+		display: inline-block;
+		position: absolute;
+		z-index: 9;
+		width: 30px;
+		height: 30px;
+		background: white none repeat scroll 0% 0%;
+		border: 1px solid $aristo-gray;
+		border-radius: 50%;
+		top: 50%;
+		transform: translate(0, -50%);
+		
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+
+	.slick-next {
+		right: 0;
+	}
+}

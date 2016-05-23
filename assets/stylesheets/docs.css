@@ -1,0 +1,344 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,300);
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "work sans", sans-serif; }
+
+/* @import "vendors/slick/slick"; */
+*:focus {
+  outline: 0; }
+
+html,
+body {
+  font-family: "work sans", sans-serif; }
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.responsive-break {
+  display: none; }
+  @media (min-width: 768px) {
+    .responsive-break {
+      display: block; } }
+
+.btn-aristo {
+  font-weight: 700;
+  /* text-transform: uppercase; */ }
+
+.btn-aristo__lg {
+  padding: 1.4em 16px; }
+
+.btn-aristo__orange {
+  background: #ea8f33;
+  color: white; }
+  .btn-aristo__orange:hover {
+    background: #ec9c4a;
+    color: white; }
+  .btn-aristo__orange:active, .btn-aristo__orange:focus {
+    background: #d47616;
+    color: white; }
+
+.dashboard-sidebar {
+  position: relative;
+  width: 330px;
+  box-shadow: 0px 0px 2px #aaaaaa; }
+  .dashboard-sidebar .sidebar-section {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0; }
+    .dashboard-sidebar .sidebar-section:last-of-type {
+      border: none; }
+  .dashboard-sidebar .sidebar-header {
+    text-align: center; }
+  .dashboard-sidebar .sidebar-title {
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-size: 1em;
+    text-transform: uppercase; }
+  .dashboard-sidebar .sidebar-subtitle {
+    color: #848484; }
+  .dashboard-sidebar .widget-container {
+    margin-bottom: 1.8rem; }
+    .dashboard-sidebar .widget-container .widget-meta-type {
+      color: #cccccc;
+      font-size: 0.9em; }
+    .dashboard-sidebar .widget-container .widget-wrapper {
+      position: relative;
+      height: 80px; }
+    .dashboard-sidebar .widget-container .widget-instruction {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: 1px dashed #cccccc;
+      border-radius: 5px; }
+      .dashboard-sidebar .widget-container .widget-instruction p {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin: 0;
+        padding: 0 10px;
+        text-align: center;
+        transform: translate(0, -50%);
+        color: #cccccc;
+        font-size: 0.9em;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1.2; }
+    .dashboard-sidebar .widget-container .widget-content {
+      background: white;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+      overflow: hidden; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .widget-thumbnail {
+      float: right;
+      width: 80px;
+      height: 80px; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .widget-body {
+      width: calc(100% - 80px);
+      float: left;
+      padding: 9px 12px; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .widget-title {
+      margin-top: 0px;
+      margin-bottom: 0.6em;
+      font-size: 0.8em; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .form-control {
+      height: 2em;
+      padding: 0px 20px 0 3px;
+      font-size: 0.8em;
+      width: 85px;
+      display: inline-block;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: ''; }
+      .dashboard-sidebar .widget-container .widget-type__hotel .form-control::-ms-expand {
+        display: none; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .form-control + .form-control {
+      margin-left: 5px; }
+    .dashboard-sidebar .widget-container .widget-type__hotel .form-total {
+      margin: 4px 0px;
+      font-size: 0.8em; }
+      .dashboard-sidebar .widget-container .widget-type__hotel .form-total span {
+        font-weight: 700; }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-thumbnail-wrapper {
+      width: 50px;
+      height: 100%;
+      background: #0a9ee0;
+      float: left; }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-thumbnail {
+      position: relative;
+      width: 75%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-body {
+      float: left;
+      background: #0f82b5;
+      width: calc(100% - 130px);
+      height: 100%;
+      padding: 9px;
+      color: white; }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-title {
+      margin: 0.2em 0px;
+      text-transform: uppercase; }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-copy {
+      margin: 0px;
+      line-height: 1.2; }
+    .dashboard-sidebar .widget-container .widget-type__airline .widget-extra {
+      float: right;
+      width: 80px;
+      height: 100%;
+      background: #0a9ee0;
+      padding: 9px; }
+    .dashboard-sidebar .widget-container .widget-type__airline .total {
+      position: relative;
+      margin: 0;
+      top: 50%;
+      color: white;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.2em;
+      line-height: 1.2;
+      transform: translate(0, -50%); }
+  .dashboard-sidebar .sidebar-footer {
+    border-top: 1px dashed #cccccc;
+    padding: 16px; }
+    .dashboard-sidebar .sidebar-footer .text-total {
+      margin: 0;
+      color: #cccccc;
+      text-transform: uppercase;
+      font-size: 0.75em; }
+    .dashboard-sidebar .sidebar-footer .text-destination {
+      font-weight: 700;
+      text-transform: uppercase; }
+    .dashboard-sidebar .sidebar-footer .text-nominal {
+      float: right;
+      padding-top: 0.15em;
+      font-size: 2em;
+      font-weight: 300; }
+    .dashboard-sidebar .sidebar-footer .cta-wrapper {
+      margin-top: 2rem; }
+
+.dashboard-footer {
+  position: relative;
+  padding: 16px;
+  margin-top: 2px solid #848484;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.1);
+  background: #fafafa; }
+  .dashboard-footer .section-header {
+    margin-bottom: 1rem; }
+  .dashboard-footer .section-title {
+    text-transform: uppercase; }
+    .dashboard-footer .section-title span {
+      text-transform: none;
+      font-weight: 400; }
+    .dashboard-footer .section-title a {
+      color: #0a9ee0;
+      margin-left: 1em; }
+  .dashboard-footer .hotel-carousel {
+    position: relative;
+    list-style: none;
+    padding: 0; }
+  .dashboard-footer .hotel-item-wrapper {
+    display: inline-block;
+    padding: 0 12px;
+    height: 80px; }
+  .dashboard-footer .hotel-item {
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    height: 80px;
+    background: white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer; }
+    .dashboard-footer .hotel-item.is-selected {
+      border: 2px solid #0a9ee0; }
+  .dashboard-footer .item-body {
+    padding: 9px;
+    float: left;
+    width: calc(100% - 50px);
+    height: 100%; }
+  .dashboard-footer .item-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 0.8em; }
+  .dashboard-footer .text-start-from {
+    color: #cccccc;
+    margin: 0;
+    font-size: 0.8em; }
+  .dashboard-footer .text-rate {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.8em; }
+  .dashboard-footer .item-thumbnail {
+    width: 50px;
+    height: 100%;
+    float: right;
+    background-size: cover;
+    background-position: center; }
+  .dashboard-footer .slick-arrow {
+    display: inline-block;
+    position: absolute;
+    z-index: 9;
+    width: 30px;
+    height: 30px;
+    background: white none repeat scroll 0% 0%;
+    border: 1px solid #848484;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .dashboard-footer .slick-prev {
+    left: 0; }
+  .dashboard-footer .slick-next {
+    right: 0; }
+
+.docs-container > section > h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  color: black;
+  text-transform: none; }
+
+.module-wrapper .container {
+  width: auto; }
+
+.docs-header {
+  padding: 4em 0;
+  background: #ededed;
+  text-align: center;
+  margin-bottom: 4em; }
+  @media (min-width: 992px) {
+    .docs-header {
+      padding: 9em 0; } }
+  .docs-header h1 {
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 2em;
+    background: gray;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-transform: uppercase; }
+  .docs-header h2 {
+    max-width: 60%;
+    font-size: 2.5em;
+    margin: 0 auto 0.8em; }
+  .docs-header p {
+    display: inline-block;
+    border-top: 1px solid gray;
+    padding-top: .5em; }
+
+.docs-container > section {
+  margin-bottom: 4em;
+  padding: 20px;
+  border: 1px solid #ddd; }
+
+.show-code {
+  display: inline-block;
+  margin: 1em 0; }
+
+.palette {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 2px solid #000;
+  display: inline-block;
+  margin: 0 20px 20px 0; }
+  .palette:after {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; }
+  .palette.base {
+    background-color: gray; }
+    .palette.base:after {
+      content: "gray"; }
+  .palette.hover {
+    background-color: #676767; }
+    .palette.hover:after {
+      content: "#676767"; }
+  .palette.dark {
+    background-color: #4d4d4d; }
+    .palette.dark:after {
+      content: "#4d4d4d"; }
+  .palette.background {
+    background-color: white; }
+    .palette.background:after {
+      color: black;
+      content: "white"; }
+  .palette.complement {
+    background-color: gray; }
+    .palette.complement:after {
+      content: "gray"; }
