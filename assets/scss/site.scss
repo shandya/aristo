@@ -2,14 +2,19 @@
 @import "utilities";
 @import "typography";
 
-/* @import "vendors/slick/slick"; */
+@import "vendors/slick/slick";
+@import "vendors/jquery-ui/jquery-ui";
+@import "vendors/jquery-ui/jquery-ui.structure";
+@import "vendors/jquery-ui/jquery-ui.theme";
 
 @import "base";
 
 @import "components/buttons";
 @import "components/header";
 @import "components/footer";
+@import "components/form";
 @import "components/dashboard-sidebar";
 @import "components/hotel-carousel";
+@import "components/destination-filter";
 
 @import "pages/index";

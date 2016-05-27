@@ -3,14 +3,16 @@
 		<header class="sidebar-header">
 			<h3 class="sidebar-title">Select Trip Preference</h3>
 		</header>
-		<form action="">
-			<input type="radio" name="trip-preference" id="inputTripEficient" value="Efficient">
-			<label for="inputTripEficient">Efficient</label>
-			<input type="radio" name="trip-preference" id="inputTripEconomy" value="Economy">
-			<label for="inputTripEconomy">Economy</label>
-			<input type="radio" name="trip-preference" id="inputTripLuxury" value="Luxury">
-			<label for="inputTripLuxury">Luxury</label>
-		</form>
+		<div class="trip-preference-wrapper">
+			<form action="">
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripEficient" value="Efficient">
+				<label for="inputTripEficient">Efficient</label>
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripEconomy" value="Economy">
+				<label for="inputTripEconomy">Economy</label>
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripLuxury" value="Luxury">
+				<label for="inputTripLuxury">Luxury</label>
+			</form>
+		</div>
 	</section>
 	<section class="sidebar-section">
 		<header class="sidebar-header">
@@ -43,6 +45,7 @@
 			<div class="widget-container">
 				<div class="widget-meta-type"></div>
 				<div class="widget-wrapper">
+					<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>	
 					<div class="widget-content widget-type__airline">
 						<div class="widget-thumbnail-wrapper">
 							<img src="../assets/images/mockups/icon-airline.png" alt="" class="widget-thumbnail">
@@ -62,6 +65,7 @@
 			<div class="widget-container">
 				<div class="widget-meta-type"></div>
 				<div class="widget-wrapper">
+					<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>	
 					<div class="widget-content widget-type__hotel">
 						<div class="widget-body">
 							<h5 class="widget-title">Intercontinental Jakarta</h5>

@@ -61,14 +61,6 @@
 
 		.form-control {
 			width: 12rem;
-			-webkit-appearance: none;
-		    -moz-appearance: none;
-		    text-indent: 1px;
-		    text-overflow: '';
-
-			&::-ms-expand {
-			    display: none;
-			}
 		}
 	}
 }

@@ -1,0 +1,44 @@
+select.form-control {
+	position: relative;
+	z-index: 3;
+	background: none;
+	
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+	&::-ms-expand {
+	    display: none;
+	}
+}
+
+.select-wrapper {
+	position: relative;
+
+	&::after {
+		content: "\f078";
+		position: absolute;
+		color: #8c97b2;
+		display: inline-block;
+		right: 0.9em;
+		top: 0.7em;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		font-size-adjust: none;
+		font-stretch: normal;
+		font-feature-settings: normal;
+		font-language-override: normal;
+		font-kerning: auto;
+		font-synthesis: weight style;
+		font-variant: normal;
+		font-size: inherit;
+		text-rendering: auto;
+	}
+
+	.form-control {
+		padding-right: 2.4em;
+	}
+}

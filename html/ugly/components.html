@@ -16,12 +16,6 @@
 	    <div class="collapse navbar-collapse" id="navbar-collapse">
 
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li>
-	      		<a href="" class="navbar-link">
-	      			<img src="../assets/images/icon-meeting.png" alt="" class="navbar-link-icon">
-	      			Meetings
-	      		</a>
-	      	</li>
 	        <li>
 	        	<img src="../assets/images/mockups/john-doe.jpg" alt="" class="user-avatar">
 	        	<p class="navbar-text user-message">Welcome, <span>John Doe</span></p>
@@ -30,12 +24,15 @@
 
 	      <form class="navbar-form navbar-right currency-control">
 	        <div class="form-group">
-						<select class="form-control">
-							<option value="">US Dollar</option>
-							<option value="">Singapore Dollar</option>
-							<option value="">Indonesia Rupiah</option>
-							<option value="">Malaysia Ringgit</option>
-						</select> 
+	        	<div class="div select-humanw-wrapper">
+	        		<img src="../assets/images/icon-meeting.png" alt="" class="navbar-link-icon">
+	        	</div>
+				<select class="form-control">
+					<option value="">US Dollar</option>
+					<option value="">Singapore Dollar</option>
+					<option value="">Indonesia Rupiah</option>
+					<option value="">Malaysia Ringgit</option>
+				</select> 
 	        </div>
 	      </form>
 	    </div><!-- /.navbar-collapse -->
@@ -46,14 +43,16 @@
 		<header class="sidebar-header">
 			<h3 class="sidebar-title">Select Trip Preference</h3>
 		</header>
-		<form action="">
-			<input type="radio" name="trip-preference" id="inputTripEficient" value="Efficient">
-			<label for="inputTripEficient">Efficient</label>
-			<input type="radio" name="trip-preference" id="inputTripEconomy" value="Economy">
-			<label for="inputTripEconomy">Economy</label>
-			<input type="radio" name="trip-preference" id="inputTripLuxury" value="Luxury">
-			<label for="inputTripLuxury">Luxury</label>
-		</form>
+		<div class="trip-preference-wrapper">
+			<form action="">
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripEficient" value="Efficient">
+				<label for="inputTripEficient">Efficient</label>
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripEconomy" value="Economy">
+				<label for="inputTripEconomy">Economy</label>
+				<input type="radio" name="trip-preference" class="form-control" id="inputTripLuxury" value="Luxury">
+				<label for="inputTripLuxury">Luxury</label>
+			</form>
+		</div>
 	</section>
 	<section class="sidebar-section">
 		<header class="sidebar-header">
@@ -86,6 +85,7 @@
 			<div class="widget-container">
 				<div class="widget-meta-type"></div>
 				<div class="widget-wrapper">
+					<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>	
 					<div class="widget-content widget-type__airline">
 						<div class="widget-thumbnail-wrapper">
 							<img src="../assets/images/mockups/icon-airline.png" alt="" class="widget-thumbnail">
@@ -105,6 +105,7 @@
 			<div class="widget-container">
 				<div class="widget-meta-type"></div>
 				<div class="widget-wrapper">
+					<div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>	
 					<div class="widget-content widget-type__hotel">
 						<div class="widget-body">
 							<h5 class="widget-title">Intercontinental Jakarta</h5>
@@ -202,7 +203,39 @@
 			</div>
 		</li>
 	</ul>
-</section></div><a href="" class="show-code js-show-code">Show Code</a><div class="code-container hide"><pre><code class="lang-markup"></code></pre></div></section></div><footer class="footer"><div class="container"><hr><p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')</script><script src="../assets/javascripts/vendors/bootstrap.min.js"></script><script src="../assets/javascripts/vendors/slick/slick.min.js"></script><script src="../assets/javascripts/site.min.js"></script><script> $(function() {
+</section></div><a href="" class="show-code js-show-code">Show Code</a><div class="code-container hide"><pre><code class="lang-markup"></code></pre></div></section></div><div class="container docs-container"><section><h3>Destination Filter</h3><div class="module-wrapper"><section class="destination-filter">
+	<form class="form-inline">
+	  <div class="form-group">
+		  	<div class="select-wrapper">
+				<select class="form-control" id="inputDeparture">
+					<option value="">Jakarta, Indonesia</option>
+					<option value="">Bandung, Indonesia</option>
+					<option value="">Bali, Indonesia</option>
+				</select> 
+		  	</div>
+	  </div>
+	  <div class="form-group">
+	  		<div class="select-wrapper">
+				<select class="form-control" id="inputReturn">
+					<option value="">Singapore</option>
+					<option value="">Kuala Lumpur, Malaysia</option>
+				</select> 
+			</div>
+	  </div>
+	  <div class="form-group">
+	    <input type="text" class="form-control js-jquery-datepicker" id="inputDepartureDate">
+	  </div>
+	  <div class="form-group">
+	    <input type="text" class="form-control js-jquery-datepicker" id="inputReturnDate">
+	  </div>
+	  <button type="" class="btn btn-aristo btn-aristo__gray"><i class="fa fa-exchange" aria-hidden="true"></i><span class="sr-only">Exchange</span>
+	  <button type="submit" class="btn btn-aristo btn-aristo__orange">Search</button>
+	</form>
+
+	<div class="cta-wrapper">
+		<a href="" role="button" class="btn-add-destination"><i class="fa fa-plus" aria-hidden="true"></i> Add Destination!</a>
+	</div>
+</section></div><a href="" class="show-code js-show-code">Show Code</a><div class="code-container hide"><pre><code class="lang-markup"></code></pre></div></section></div><footer class="footer"><div class="container"><hr><p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')</script><script src="../assets/javascripts/vendors/jquery-ui.min.js"></script><script src="../assets/javascripts/vendors/bootstrap.min.js"></script><script src="../assets/javascripts/vendors/slick/slick.min.js"></script><script src="../assets/javascripts/site.min.js"></script><script> $(function() {
 		$('.docs-container').each(function() {
 			var $this = $(this);
 
@@ -224,6 +257,8 @@
 			}
 			codeContainer.toggleClass('hide');
 		});
+
+		$( ".js-jquery-datepicker" ).datepicker();
 });
 
 $('#js-hotel-carousel').slick({

@@ -1,0 +1,28 @@
+.destination-filter {
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.21);
+
+	.cta-wrapper {
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.btn-add-destination {
+		padding: 1rem 0.5rem;
+		display: block;
+		width: 160px;
+		margin: 0px auto;
+		border-radius: 5px 5px 0px 0px;
+		border: 1px dashed $aristo-gray-light;
+		border-bottom: none;
+		color: $aristo-gray;
+		text-decoration: none;
+
+		.fa {
+			padding: 4px;
+			border-radius: 50%;
+			background: $aristo-gray-light;
+			height: 1.5em;
+			width: 1.5em;
+		}
+	}
+}

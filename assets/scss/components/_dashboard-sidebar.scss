@@ -27,6 +27,61 @@
 		color: $aristo-gray;
 	}
 
+	.trip-preference-wrapper {
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 66.66%;
+			height: 1px;
+			background: $aristo-gray-light;
+			top: 2em;
+			left: 16.665%;
+		}
+
+		.form-control {
+			position: absolute;
+			left: -1000%;
+		}
+
+		label {
+			float: left;
+			position: relative;
+			margin: 2em 0;
+			padding-top: 2em;
+			width: 33.33%;
+			color: $aristo-gray-light;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: 700;
+			cursor: pointer;
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: 12px;
+				height: 12px;
+				top: 0;
+				left: calc(50% - 6px);
+				background: $aristo-gray-light;
+				border-radius: 50%;
+				box-shadow: 0 2px 2px rgba(0,0,0,0.2) inset;
+			}
+		}
+
+		.form-control:checked + label {
+			color: $aristo-sky-blue;
+
+			&::before {
+				background: $aristo-sky-blue;
+				box-shadow: 0 0 6px rgba(10,158,224,1);
+			}
+		}
+	}
+
 	.widget-container {
 		margin-bottom: 1.8rem;
 
@@ -38,6 +93,21 @@
 		.widget-wrapper {
 			position: relative;
 			height: 80px;
+		}
+
+		.widget-wrapper .close {
+			z-index: 3;
+			position: relative;
+			color: white;
+			border: 1px solid white;
+			padding: 0.12em 0px 0px 0.2em;
+			width: 1.4em;
+			height: 1.4em;
+			font-size: 0.9em;
+			right: 0.5em;
+			top: 0.5em;
+			opacity: 1;
+			border-radius: 50%;
 		}
 
 		.widget-instruction {
