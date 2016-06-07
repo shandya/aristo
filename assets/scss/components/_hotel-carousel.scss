@@ -1,8 +1,8 @@
 .dashboard-footer {
 	position: relative;
 	padding: 16px;
-	margin-top: 2px solid $aristo-gray;
-	box-shadow: 0 -8px 32px rgba(0,0,0,0.1);
+	border-top: 2px solid $aristo-gray;
+	box-shadow: -18px -8px 32px rgba(0,0,0,0.1);
 	background: #fafafa;
 
 	.section-header {
@@ -10,6 +10,7 @@
 	}
 
 	.section-title {
+		margin-top: 0;
 		text-transform: uppercase;
 
 		span {
@@ -26,13 +27,14 @@
 	.hotel-carousel {
 		position: relative;
 		list-style: none;
+		margin-bottom: 0;
 		padding: 0;
 	}
 
 	.hotel-item-wrapper {
 		display: inline-block;
 		padding: 0 12px;
-		height: 80px;
+		height: 84px;
 	}
 
 	.hotel-item {
@@ -40,6 +42,7 @@
 		position: relative;
 		width: 170px;
 		height: 80px;
+		margin: 2px 0;
 		background: white;
 		box-shadow: 0 0 2px rgba(0,0,0,0.2);
 		border-radius: 5px;

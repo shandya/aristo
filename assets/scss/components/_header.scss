@@ -1,6 +1,9 @@
 .navbar-aristo {
-	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 	border-radius: 0;
+	margin: 0;
+	z-index: 4;
+	position: relative;
 
 	.navbar-brand {
 		padding: 0;
@@ -10,7 +13,7 @@
 		height: 50px;
 	}
 
-	.navbar-toggle {
+	.navbar-toggle__desktop {
 		display: block;
 		float: left;
 	}
@@ -27,11 +30,14 @@
 		}
 	}
 
-	.user-avatar {
+	.icon-menu {
 		float: left;
 		height: 38px;
 		width: 38px;
-		margin: 6px 6px 6px 15px;
+		margin: -9px 12px -9px 0px;
+	}
+
+	.icon-menu__user-avatar {
 		border-radius: 50%;
 		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 	}
@@ -43,10 +49,13 @@
 		margin: -15px 0px;
 	}
 
-	.navbar-link {
-		display: inline-block;
-		color: $aristo-navy-blue;
+	.nav li a {
 		font-weight: 700;
+		color: $aristo-navy-blue;
+
+		span {
+			font-weight: 400;
+		}
 	}
 
 	.nav li + li {
@@ -60,7 +69,7 @@
 		border-right: 1px solid rgb(238, 238, 238);
 
 		.form-control {
-			width: 12rem;
+			width: 14rem;
 		}
 	}
 }

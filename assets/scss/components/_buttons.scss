@@ -3,6 +3,10 @@
 	/* text-transform: uppercase; */
 }
 
+.btn-aristo.btn-aristo__thin {
+	font-weight: 300;
+}
+
 .btn-aristo__lg {
 	padding: 1.4em 16px;
 }
@@ -20,5 +24,21 @@
 	&:focus {
 		background: darken($aristo-orange, 10%);
 		color: white;
+	}
+}
+
+.btn-aristo__white {
+	background: #fff;
+	color: #333;
+
+	&:hover {
+		background: darken(#fff, 5%);
+		color: #333;
+	}
+
+	&:active,
+	&:focus {
+		background: darken(#fff, 10%);
+		color: #333;
 	}
 }

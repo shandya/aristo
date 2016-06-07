@@ -1,12 +1,25 @@
 script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 script.
 	window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')
+script(src='../assets/javascripts/vendors/jquery-ui.min.js')
+script(src='../assets/javascripts/vendors/jquery.nanoscroller.min.js')
 script(src='../assets/javascripts/vendors/bootstrap.min.js')
 script(src='../assets/javascripts/vendors/slick/slick.min.js')
 script(src='../assets/javascripts/site.min.js')
 
-
 script.
-	(function() { 
+	$(function() {
+		$(".nano").nanoScroller();
 
-	})();
+		$( ".js-jquery-datepicker" ).datepicker();
+
+		$('#js-hotel-carousel').slick({
+			dots: false,
+			infinite: true,
+			slidesToShow: 4,
+			variableWidth: true,
+			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+		});
+	});
+

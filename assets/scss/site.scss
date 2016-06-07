@@ -6,6 +6,7 @@
 @import "vendors/jquery-ui/jquery-ui";
 @import "vendors/jquery-ui/jquery-ui.structure";
 @import "vendors/jquery-ui/jquery-ui.theme";
+@import "vendors/nanoscroller";
 
 @import "base";
 
@@ -16,5 +17,8 @@
 @import "components/dashboard-sidebar";
 @import "components/hotel-carousel";
 @import "components/destination-filter";
+@import "components/modal";
+@import "components/time-table";
 
 @import "pages/index";
+@import "pages/calender";

@@ -1,7 +1,10 @@
 .dashboard-sidebar {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	width: 330px;
-	box-shadow: 0px 0px 2px rgb(170, 170, 170);
+	box-shadow: 0px 2px 2px rgb(170, 170, 170);
+	background: white;
 
 	.sidebar-section {
 		padding: 16px;
@@ -10,6 +13,14 @@
 		&:last-of-type {
 			border: none;
 		}
+	}
+
+	.sidebar-section__trip-preference {
+
+	}
+
+	.sidebar-section__booking-details {
+		flex-grow: 2;
 	}
 
 	.sidebar-header {
@@ -25,6 +36,10 @@
 
 	.sidebar-subtitle {
 		color: $aristo-gray;
+	}
+
+	.nano-content {
+		padding: 16px;
 	}
 
 	.trip-preference-wrapper {
@@ -167,12 +182,22 @@
 				font-size: 0.8em;
 			}
 
-			.form-control {
+			.select-wrapper {
 				height: 2em;
-				padding: 0px 20px 0 3px;
 				font-size: 0.8em;
-				width: 85px;
+				width: 90px;
 				display: inline-block;
+
+				select {
+					font-size: 1em;
+					padding-left: 6px;
+					height: 26px;
+					padding-bottom: 0;
+					padding-top: 0;
+				}
+			}
+
+			.form-control {
 			    -webkit-appearance: none;
 			    -moz-appearance: none;
 			    text-indent: 1px;
@@ -269,10 +294,12 @@
 		.text-destination {
 			font-weight: 700;
 			text-transform: uppercase;
+			margin-bottom: 0;
 		}
 
 		.text-nominal {
 			float: right;
+			margin-bottom: 0;
 			padding-top: 0.15em;
 			font-size: 2em;
 			font-weight: 300;

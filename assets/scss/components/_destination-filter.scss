@@ -1,8 +1,16 @@
 .destination-filter {
 	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.21);
+	background: white;
+
+	.form-inline {
+		padding: 15px 15px 5px;
+	}
+
+	.form-group {
+		margin-bottom: 10px;
+	}
 
 	.cta-wrapper {
-		margin-top: 2rem;
 		text-align: center;
 	}
 

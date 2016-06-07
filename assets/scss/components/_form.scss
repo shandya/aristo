@@ -41,4 +41,76 @@ select.form-control {
 	.form-control {
 		padding-right: 2.4em;
 	}
+
+	&.select-wrapper__currency {
+		.currency {
+			position: absolute;
+			font-weight: 700;
+			line-height: 34px;
+			left: 0.8em;
+		}
+		
+		.form-control {
+			padding-left: 2em;
+		}
+	}
+
+	&.select-wrapper__departure {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.8em;
+			height: 20px;
+			width: 20px;
+			background-size: 100%;
+			top: 50%;
+			transform: translate(0, -50%);
+			background-image: url('../images/icons/icon-departure.gif');
+		}
+
+		select {
+			padding-left: 2.4em;
+		}
+	}
+
+	&.select-wrapper__return {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0.8em;
+			height: 20px;
+			width: 20px;
+			background-size: 100%;
+			top: 50%;
+			transform: translate(0, -50%);
+			background-image: url('../images/icons/icon-return.gif');
+		}
+
+		select {
+			padding-left: 2.4em;
+		}
+	}
+}
+
+.date-wrapper {
+	position: relative;
+	background: white;
+
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0.8em;
+		height: 20px;
+		width: 20px;
+		background-size: 100%;
+		top: 50%;
+		transform: translate(0, -50%);
+		background-image: url('../images/icons/icon-date.gif');
+	}
+
+	input {
+		background: none;
+		position: relative;
+		z-index: 2;
+	}
 }

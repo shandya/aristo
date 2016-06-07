@@ -1,0 +1,55 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-meeting">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-meeting" tabindex="-1" role="dialog" aria-labelledby="modal-meeting-label">
+  <div class="modal-dialog modal-aristo modal-aristo__select-meeting" role="document">
+    <img src="../assets/images/icons/icon-meeting__white.svg" alt="" class="modal-icon">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="modal-action-nav">
+          <ul class="modal-action-list">
+            <li><a href="" class="modal-action">+Add Email</a></li>
+            <li><a href="" class="modal-action">+New Meeting</a></li>
+          </ul>
+        </nav>
+
+        <h4 class="modal-title" id="modal-meeting-label">Select Meetings</h4>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="email-info">
+            <img src="../assets/images/icons/icon-gmail.gif" alt="" class="email-thumb">
+            <p class="email-id"><strong>Gmail</strong> - John.Do@gmail.com</p>
+          </div>
+          <h3 class="meeting-list-title">Upcoming Meetings</h3>
+          <ul class="meeting-list">
+            <li class="meeting-item">
+              <input type="radio" name="meeting-list" class="form-control" id="inputThursdayAristo" value="">
+              <label for="inputThursdayAristo"><strong>Thursday, 8th PM April</strong> - 08:00 am - 01:00 pm<br />"Aristo Design" meeting with Eric at PS Cafe, <strong>Singapore</strong></label>
+            </li>
+            <li class="meeting-item">
+              <input type="radio" name="meeting-list" class="form-control" id="inputFridayPrototype" value="">
+              <label for="inputFridayPrototype"><strong>Friday, 9th PM April</strong> - 10:00 am - 01:00 pm<br />"Prototype dev" meeting with Eric at ION Orchard, <strong>Singapore</strong></label>
+            </li>
+            <li class="meeting-item">
+              <input type="radio" name="meeting-list" class="form-control" id="inputFridayProposal" value="">
+              <label for="inputFridayProposal"><strong>Friday, 9th PM April</strong> - 04:00 pm - 07:00 pm<br />"Proposal" meeting with David at Four Season, <strong>Singapore</strong></label>
+            </li>
+            <li class="meeting-item">
+              <input type="radio" name="meeting-list" class="form-control" id="inputTuesday" value="">
+              <label for="inputTuesday"><strong>Tuesday, 19th PM April</strong> - 10:00 am - 01:00 pm<br />"API Intergration" meeting with Hermawan at Skype, <strong>Singapore</strong></label>
+            </li>
+          </ul>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-aristo btn-aristo__thin btn-aristo__orange" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-aristo btn-aristo__thin btn-aristo__white">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
