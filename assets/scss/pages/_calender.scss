@@ -8,12 +8,19 @@
 		position: absolute;
 		height: 100%;
 		width: calc(100% - 330px);
+		display: flex;
+		flex-direction: column;
 	}
 
 	.destination-filter {
 		width: 100%;
-    	position: absolute;
-    	z-index: 2;
+		z-index: 2;
+/*     	position: absolute;
+    	z-index: 2; */
+	}
+
+	.time-table {
+		flex-grow: 2;
 	}
 
 	.dashboard-sidebar {
@@ -24,9 +31,9 @@
 	}
 
 	.dashboard-footer {
-		position: absolute;
+/* 		position: absolute;
 		bottom: 0px;
-		left: 0px;
+		left: 0px; */
 		width: 100%;
 	}
 }

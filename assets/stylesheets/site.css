@@ -2717,6 +2717,38 @@ select.form-control {
   box-shadow: 0 0 6px #0a9ee0;
   border-color: #107cac; }
 
+.time-table .time-ruler {
+  background: #fafafa none repeat scroll 0% 0%;
+  width: 90px;
+  border-right: 1px solid #dddddd; }
+
+.time-table .time-ruler-icon {
+  width: 40px;
+  margin-top: 36px;
+  margin-left: 40px; }
+
+.time-table .time-ruler-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 20px; }
+  .time-table .time-ruler-list li {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px dashed #dddddd;
+    text-align: right;
+    padding-right: 1em;
+    color: #848484; }
+
+.time-table > .nano-pane {
+  width: 10px;
+  background: transparent none repeat scroll 0% 0%;
+  right: 3px; }
+  .time-table > .nano-pane > .nano-slider {
+    height: 22px;
+    transform: translate(0px, 109px);
+    background: #5e5e5e none repeat scroll 0% 0%;
+    border-radius: 5px; }
+
 .page__calender {
   position: absolute;
   width: 100%;
@@ -2725,18 +2757,23 @@ select.form-control {
   .page__calender .page-content {
     position: absolute;
     height: 100%;
-    width: calc(100% - 330px); }
+    width: calc(100% - 330px);
+    display: flex;
+    flex-direction: column; }
   .page__calender .destination-filter {
     width: 100%;
-    position: absolute;
-    z-index: 2; }
+    z-index: 2;
+    /*     	position: absolute;
+    	z-index: 2; */ }
+  .page__calender .time-table {
+    flex-grow: 2; }
   .page__calender .dashboard-sidebar {
     position: absolute;
     right: 0;
     height: 100%;
     z-index: 3; }
   .page__calender .dashboard-footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
+    /* 		position: absolute;
+		bottom: 0px;
+		left: 0px; */
     width: 100%; }
