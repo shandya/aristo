@@ -21,5 +21,43 @@ script.
 			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
 		});
+
+		$('.time-slider__departure .day-title-list').slick({	
+			slidesToShow: 3,
+			asNavFor: '.time-slider__departure .day-list',
+			infinite: false,
+			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+		});
+
+		$('.time-slider__departure .day-list').slick({
+			slidesToShow: 3,
+			infinite: false,
+			asNavFor: '.time-slider__departure .day-list-title',
+			arrows: false
+		});
+
+		$('.time-slider__return .day-title-list').slick({	
+			slidesToShow: 3,
+			infinite: false,
+			asNavFor: '.time-slider__return .day-list',
+			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+		});
+
+		$('.time-slider__return .day-list').slick({
+			slidesToShow: 3,
+			infinite: false,
+			asNavFor: '.time-slider__return .day-list-title',
+			arrows: false
+		});
+
+
+		$(".time-table .nano").hover(function() {
+			$(".time-table .nano").not(this).unbind('update');
+			$(this).on("update", function(event, vals){ 
+				$(".time-table .nano").not(this).nanoScroller({ scrollTop: vals.position });
+			});
+		});
 	});
 

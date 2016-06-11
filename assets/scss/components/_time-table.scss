@@ -1,5 +1,9 @@
 .time-table {
+	position: relative;
+
 	.time-ruler {
+		height: 100%;
+		position: absolute;
 		background: rgb(250, 250, 250) none repeat scroll 0% 0%;
 		width: 90px;
 		border-right: 1px solid rgb(221, 221, 221);
@@ -9,6 +13,11 @@
 		width: 40px;
 		margin-top: 36px;
 		margin-left: 40px;
+	}
+
+	.time-ruler-list-wrapper {
+		height: calc(100% - 76px);
+		position: relative;
 	}
 
 	.time-ruler-list {
@@ -26,7 +35,181 @@
 		}
 	}
 
-	> .nano-pane {
+	.time-slider-wrapper {
+		display: flex;
+		height: 100%;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		background: rgb(250, 250, 250) none repeat scroll 0% 0%;
+		width: calc(100% - 90px);
+	}
+
+	.time-slider {
+		position: relative;
+		height: 100%;
+		flex-grow: 1;
+		width: 50%;
+		flex-shrink: 1;
+	}
+
+	.time-slider + .time-slider::after {
+		content: "";
+		position: absolute;
+		width: 3px;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,0.15);
+		z-index: 3;
+	}
+
+	.time-slider-title {
+		margin: 5px 0;
+		text-transform: uppercase;
+		color: rgb(211, 211, 211);
+		letter-spacing: 0.1em;
+		font-size: 1.4rem;
+		text-align: center;
+		height: 16px;
+	}
+
+	.day-list-wrapper {
+		position: relative;
+		height: calc(100% - 66px);
+	}
+
+	.day-title-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		.day-title-item {
+			width: 100%;
+			height: 50px;
+			border-bottom: 2px solid rgb(108, 108, 108);
+			color: #5e5e5e;
+			text-align: center;
+		}
+
+		.item-title {
+			font-weight: 400;
+			font-size: 0.8em;
+			line-height: 1.2;
+		}
+	}
+
+	.day-list {
+		list-style: none;
+		padding: 0;
+
+		.day-item {
+			position: relative;
+		}
+	}
+
+	.hour-list {
+		list-style: none;
+		padding: 0;
+		overflow: hidden;
+		border-right: 1px solid #ccc;
+
+		li {
+			height: 36px;
+			line-height: 36px;
+			border-bottom: 1px dashed #DDD;
+			color: #848484;
+			position: relative;
+		}
+	}
+
+
+	.slick-arrow {
+		position: absolute;
+	    border: medium none;
+	    background: transparent none repeat scroll 0% 0%;
+	    font-size: 2em;
+	    top: 5px;	
+	    z-index: 2;
+	}
+
+	.slick-prev {
+	    left: 10px;
+	}
+
+	.slick-next {
+		right: 10px;
+	}
+
+
+	.flight-card {
+		position: absolute;
+		background: white none repeat scroll 0% 0%;
+		width: 100%;
+		height: 100%;
+		border-radius: 3px;
+		box-shadow: 0px 0px 2px;
+
+		.flight-thumb-wrapper {
+			float: left;
+			width: 35px;
+			height: 100%;
+			border-right: 1px solid rgb(221, 221, 221);
+			border-radius: 3px 0 0 3px;
+			overflow: hidden;
+		}
+
+		.flight-thumb {
+			width: 100%;
+			height: 100%;
+		}
+
+		.flight-info {
+			position: relative;
+			float: left;
+			height: 100%;
+			width: calc(100% - 70px);
+			border-right: 1px solid #DDD;
+			padding: 3px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				background-image: url('../images/icons/decoration-connector.gif');
+				background-size: 100% 100%;
+				width: 7px;
+				height: 19px;
+				right: 15px;
+				top: 8px;
+			}
+		}
+
+		.flight-departure,
+		.flight-arrival {
+			height: 50%;
+			font-size: 12px;
+			line-height: 14.5px;
+			padding-left: 12px;
+			text-transform: uppercase;
+		}
+
+		.flight-cost {
+			float: right;
+			width: 35px;
+			height: 100%;
+			color: $aristo-orange;
+			text-align: center;
+			line-height: 35px;
+		}
+	}
+	
+
+	.time-ruler-list-wrapper > .nano-pane,
+	.time-slider:not(:last-child) .day-list-wrapper > .nano-pane {
+		opacity: 0;
+	}
+
+ 	.time-slider:last-child .day-list-wrapper > .nano-pane {
 		width: 10px;
 		background: transparent none repeat scroll 0% 0%;
 		right: 3px;
