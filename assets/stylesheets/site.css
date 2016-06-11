@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,900);
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "work sans", sans-serif; }
+  font-family: "open sans", sans-serif; }
 
 /* Slider */
 .slick-slider {
@@ -2117,7 +2117,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 html,
 body {
-  font-family: "work sans", sans-serif; }
+  font-family: "open sans", sans-serif; }
 
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -2616,6 +2616,8 @@ select.form-control {
       background: #cccccc;
       height: 1.5em;
       width: 1.5em; }
+  .destination-filter select:invalid {
+    color: gray; }
 
 .modal-backdrop {
   background: #078ecb; }

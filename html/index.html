@@ -137,6 +137,12 @@
             });
           });
         });
+        var destination_group = $('.js-destination-group-template').html();
+        $('.btn-add-destination').click(function(e)
+        {
+          e.preventDefault();
+          $('.destination-group-wrapper').append(destination_group);
+        });
       });
     </script>
   </body>

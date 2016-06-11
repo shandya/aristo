@@ -59,5 +59,15 @@ script.
 				$(".time-table .nano").not(this).nanoScroller({ scrollTop: vals.position });
 			});
 		});
+
+
+
+		var destination_group = $('.js-destination-group-template').html();
+
+		$('.btn-add-destination').click(function(e) {
+			e.preventDefault();
+			
+		    $('.destination-group-wrapper').append(destination_group);
+		});
 	});
 
