@@ -106,6 +106,10 @@
 		.day-item {
 			position: relative;
 		}
+
+		.day-item.is-selected {
+			background: #e2f1f7;
+		}
 	}
 
 	.hour-list {
@@ -190,7 +194,6 @@
 			font-size: 12px;
 			line-height: 14.5px;
 			padding-left: 12px;
-			text-transform: uppercase;
 		}
 
 		.flight-cost {
@@ -200,6 +203,89 @@
 			color: $aristo-orange;
 			text-align: center;
 			line-height: 35px;
+		}
+
+		.flight-time {
+			display: none;
+		}
+
+		.flight-airport {
+			display: none;
+		}
+
+		.flight-code {
+			display: none;
+		}
+	}
+
+	.flight-card.is-selected {
+		height: 180px;
+		z-index: 2;
+		border: 2px solid rgb(10, 158, 224);
+
+		.flight-thumb-wrapper {
+			float: none;
+			width: 100%;
+			height: 35px;
+		}
+
+		.flight-thumb {
+			width: 35px;
+		}
+
+		.flight-airline {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: calc(100% - 35px);
+			height: 35px;
+			overflow: hidden;
+			color: black;
+			padding: 0 5px;
+			font-size: 1.2rem;
+			line-height: 35px;
+		}
+
+		.flight-info {
+			float: none;
+			width: 100%;
+			background: rgb(247, 247, 247) none repeat scroll 0% 0%;
+			height: 110px;
+			padding: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	
+
+		.flight-time {
+			display: block;
+			color: black;
+			margin: 0;
+			padding: 5px 0px 3px;
+			font-size: 1.3em;
+		}
+
+		.flight-airport {
+			font-size: 0.9em;
+			display: inline-block;
+		}
+
+		.airport-code {
+			display: none;
+		}
+
+		.flight-code {
+			display: block;
+			position: absolute;
+			left: 5px;
+
+		}
+
+		.flight-cost {
+			margin-right: 3px;
+			height: auto;
 		}
 	}
 	

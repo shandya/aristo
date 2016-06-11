@@ -2800,6 +2800,8 @@ select.form-control {
     padding: 0; }
     .time-table .day-list .day-item {
       position: relative; }
+    .time-table .day-list .day-item.is-selected {
+      background: #e2f1f7; }
   .time-table .hour-list {
     list-style: none;
     padding: 0;
@@ -2860,8 +2862,7 @@ select.form-control {
       height: 50%;
       font-size: 12px;
       line-height: 14.5px;
-      padding-left: 12px;
-      text-transform: uppercase; }
+      padding-left: 12px; }
     .time-table .flight-card .flight-cost {
       float: right;
       width: 35px;
@@ -2869,6 +2870,59 @@ select.form-control {
       color: #ea8f33;
       text-align: center;
       line-height: 35px; }
+    .time-table .flight-card .flight-time {
+      display: none; }
+    .time-table .flight-card .flight-airport {
+      display: none; }
+    .time-table .flight-card .flight-code {
+      display: none; }
+  .time-table .flight-card.is-selected {
+    height: 180px;
+    z-index: 2;
+    border: 2px solid #0a9ee0; }
+    .time-table .flight-card.is-selected .flight-thumb-wrapper {
+      float: none;
+      width: 100%;
+      height: 35px; }
+    .time-table .flight-card.is-selected .flight-thumb {
+      width: 35px; }
+    .time-table .flight-card.is-selected .flight-airline {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: calc(100% - 35px);
+      height: 35px;
+      overflow: hidden;
+      color: black;
+      padding: 0 5px;
+      font-size: 1.2rem;
+      line-height: 35px; }
+    .time-table .flight-card.is-selected .flight-info {
+      float: none;
+      width: 100%;
+      background: #f7f7f7 none repeat scroll 0% 0%;
+      height: 110px;
+      padding: 0; }
+      .time-table .flight-card.is-selected .flight-info::after {
+        display: none; }
+    .time-table .flight-card.is-selected .flight-time {
+      display: block;
+      color: black;
+      margin: 0;
+      padding: 5px 0px 3px;
+      font-size: 1.3em; }
+    .time-table .flight-card.is-selected .flight-airport {
+      font-size: 0.9em;
+      display: inline-block; }
+    .time-table .flight-card.is-selected .airport-code {
+      display: none; }
+    .time-table .flight-card.is-selected .flight-code {
+      display: block;
+      position: absolute;
+      left: 5px; }
+    .time-table .flight-card.is-selected .flight-cost {
+      margin-right: 3px;
+      height: auto; }
   .time-table .time-ruler-list-wrapper > .nano-pane,
   .time-table .time-slider:not(:last-child) .day-list-wrapper > .nano-pane {
     opacity: 0; }
