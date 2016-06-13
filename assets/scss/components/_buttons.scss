@@ -42,3 +42,21 @@
 		color: #333;
 	}
 }
+
+.btn-aristo__white-orange {
+	background: white;
+	color: $aristo-gray;
+
+	&:hover {
+		background: white;
+		color: $aristo-orange;
+		border: 1px solid #ebebeb;
+	}
+
+	&:active,
+	&:focus {
+		color: white;
+		border-color: $aristo-orange;
+		background: $aristo-orange;
+	}
+}

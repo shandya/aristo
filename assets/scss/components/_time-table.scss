@@ -51,6 +51,7 @@
 		flex-grow: 1;
 		width: 50%;
 		flex-shrink: 1;
+		overflow: hidden;
 	}
 
 	.time-slider + .time-slider::after {
@@ -85,7 +86,7 @@
 		margin: 0;
 
 		.day-title-item {
-			width: 100%;
+			float: left;
 			height: 50px;
 			border-bottom: 2px solid rgb(108, 108, 108);
 			color: #5e5e5e;
@@ -105,6 +106,7 @@
 
 		.day-item {
 			position: relative;
+			float: left;
 		}
 
 		.day-item.is-selected {
@@ -115,7 +117,6 @@
 	.hour-list {
 		list-style: none;
 		padding: 0;
-		overflow: hidden;
 		border-right: 1px solid #ccc;
 
 		li {
@@ -125,6 +126,16 @@
 			color: #848484;
 			position: relative;
 		}
+	}
+
+	.time-slider-list {
+		opacity: 0;
+		will-change: opacity;
+		transition: 0.3s opacity ease-in;
+	}
+
+	.time-slider-list.slick-initialized { 
+		opacity: 1; 
 	}
 
 
@@ -153,6 +164,20 @@
 		height: 100%;
 		border-radius: 3px;
 		box-shadow: 0px 0px 2px;
+		z-index: 2;
+		opacity: 1;
+		will-change: opacity;
+		transition: opacity 0.2s ease-in;
+		cursor: pointer;
+
+		&.is-background {
+			opacity: 0.3;
+			pointer-events: none;
+		}
+
+		&.is-focus {
+			border: 1px solid $aristo-sky-blue;
+		}
 
 		.flight-thumb-wrapper {
 			float: left;
@@ -222,6 +247,8 @@
 		height: 180px;
 		z-index: 2;
 		border: 2px solid rgb(10, 158, 224);
+		pointer-events: none;
+		cursor: default;
 
 		.flight-thumb-wrapper {
 			float: none;
@@ -306,5 +333,184 @@
 			background: rgb(94, 94, 94) none repeat scroll 0% 0%;
 			border-radius: 5px;
 		}
+	}
+
+	.flight-modal-overlay.is-active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+	}
+
+	.flight-modal-wrapper {
+		position: absolute;
+	}
+
+	.flight-detail-modal {
+		position: absolute;
+		width: 180px;
+		height: 266px;
+		background: white none repeat scroll 0% 0%;
+		border-radius: 5px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+		transform: translate(0, -50%);
+
+
+		.modal-header {
+			padding: 5px;
+		}
+
+		.modal-title {
+			font-size: 1.1rem;
+			text-transform: uppercase;
+			text-align: center;
+
+			span {
+				font-weight: 300;
+				font-size: 1.2em;
+				color: rgb(170, 170, 170);
+			}
+		}
+
+		.flight-thumb-wrapper {
+			width: 100%;
+			height: 38px;
+			padding: 0px 5px;
+		}
+
+		.flight-thumb {
+			width: 35px;
+			float: left;
+		}
+
+		.flight-airline {
+			width: calc(100% - 35px);
+			height: 35px;
+			overflow: hidden;
+			color: black;
+			padding: 0 5px;
+			font-size: 1.3rem;
+			line-height: 35px;
+		}
+
+		.flight-info {
+			position: relative;
+			background: #f9f9f9;
+			padding: 0px 10px;
+			height: 135px;
+		}
+
+		.flight-departure,
+		.flight-arrival {
+			width: 63%;
+			height: 50%;
+		}
+
+		.flight-departure {
+			border-bottom: 1px dashed $aristo-gray;
+		}
+
+		.flight-time {
+			display: block;
+			color: black;
+			margin: 0;
+			padding: 5px 0px 3px;
+			font-size: 1.2em;
+			line-height: 1;
+		}
+
+		.flight-airport {
+			font-size: 0.8em;
+			margin-bottom: 0;
+			display: inline-block;
+			color: $aristo-gray;
+		}
+
+		.flight-transit {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			border-left: 1px solid rgb(211, 211, 211);
+			height: 80%;
+			width: 33%;
+			margin-top: 10%;
+			padding-left: 3px;
+
+			&::before,
+			&::after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -5px;
+				background: $aristo-sky-blue;
+				border-radius: 50%;
+			}
+
+			&::before {
+				top: 0px;
+			}
+
+			&::after {
+				bottom: 0px;
+			}
+		}
+
+		.transit-duration {
+			margin: 2.5rem 0px 0px 3px;
+			font-size: 1.3em;
+			color: $aristo-sky-blue;
+		}
+
+		.transit-count {
+			padding: 0px 3px;
+			font-size: 0.85em;
+			color: $aristo-gray;
+		}
+
+		.modal-footer {
+			padding: 7px;
+			border: 0px none;
+
+			.btn-aristo {
+				width: 78px;
+				font-weight: 300;
+				font-size: 0.95em;
+			}
+		}
+	}
+
+	.modal-right .flight-detail-modal {
+		left: 8px;
+	}
+
+	.modal-left .flight-detail-modal {
+		right: 8px;
+	}
+
+	.modal-left::after {
+		content: "";
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		border: 8px solid;
+		border-color: transparent transparent transparent white;
+		right: -8px;
+		transform: translate(0, -50%);
+		top: 50%;
+	}
+
+	.modal-right::after {
+		content: "";
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		border: 8px solid;
+		border-color: transparent white transparent transparent;
+		left: -8px;
+		transform: translate(0, -50%);
+		top: 50%;
 	}
 }
