@@ -26,6 +26,8 @@ script.
 			slidesToShow: 3,
 			asNavFor: '.time-slider__departure .day-list',
 			infinite: false,
+			swipe: false,
+			draggable: false,
 			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
 		});
@@ -33,6 +35,8 @@ script.
 		$('.time-slider__departure .day-list').slick({
 			slidesToShow: 3,
 			infinite: false,
+			swipe: false,
+			draggable: false,
 			asNavFor: '.time-slider__departure .day-list-title',
 			arrows: false
 		});
@@ -40,6 +44,8 @@ script.
 		$('.time-slider__return .day-title-list').slick({	
 			slidesToShow: 3,
 			infinite: false,
+			swipe: false,
+			draggable: false,
 			asNavFor: '.time-slider__return .day-list',
 			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
@@ -48,6 +54,8 @@ script.
 		$('.time-slider__return .day-list').slick({
 			slidesToShow: 3,
 			infinite: false,
+			swipe: false,
+			draggable: false,
 			asNavFor: '.time-slider__return .day-list-title',
 			arrows: false
 		});
@@ -66,8 +74,142 @@ script.
 
 		$('.btn-add-destination').click(function(e) {
 			e.preventDefault();
-			
-		    $('.destination-group-wrapper').append(destination_group);
-		});
-	});
 
+			$('.destination-group-wrapper').append(destination_group);
+		});
+
+
+		$(".day-list").on("click", ".flight-card", function(event){
+			var _this = $(this);
+
+		    _this.parents('.day-list')
+		    	.find('.flight-card').removeClass('is-background is-focus')
+		    	.not(_this).addClass('is-background');
+
+		    _this.addClass('is-focus');
+
+		    showModal(_this);  
+		});
+
+		$(".flight-modal-overlay").on("click", ".close-modal", function(event){
+			event.preventDefault;
+
+			$(".flight-card").removeClass('is-background is-focus').unbind('click');
+		    closeModal();  
+		});
+
+		$(".flight-modal-overlay").on("click", ".book-flight", function(event){
+			event.preventDefault;
+
+			bookFlight();
+		});
+
+		function showModal(card) {
+			var offsetTop = 0;
+			var offsetLeft = 3;
+			var containerPosition = $('.time-table').offset();
+			var containerHeight = $('.time-table').height(),
+				containerWidth = $('.time-table').width(),
+				sidebarPosition = $('.dashboard-sidebar').offset();
+			var modalContentPosition = 0,
+				modalContentHeight = 0,
+				modalContentWidth = 0,
+				modalContentOffset = 0;
+			var cardPosition = card.offset(),
+				cardWidth = card.width(),
+				cardHeight = card.height();
+			var modal = $('.flight-modal-content').html();
+
+			$('.flight-modal-overlay').addClass('is-active');
+			$('.flight-modal-wrapper').append(modal);
+
+			offsetLeft = offsetLeft + cardPosition.left + cardWidth;
+			offsetTop = offsetTop + cardPosition.top - containerPosition.top + (cardHeight/2);
+
+			$('.flight-detail-modal').css({
+				'margin-top'	: '0px',
+			}); 
+
+			$('.flight-modal-wrapper').css({
+				'top'	: offsetTop + 'px',
+				'left'	: offsetLeft + 'px'
+			}); 
+
+			modalContentPosition = $('.flight-detail-modal').offset();
+			modalContentHeight = $('.flight-detail-modal').height();
+			modalContentWidth = $('.flight-detail-modal').width();
+
+			if(modalContentPosition.top < containerPosition.top) {
+				modalContentOffset = Math.abs(modalContentPosition.top - containerPosition.top);
+
+				$('.flight-detail-modal').css({
+					'margin-top'	: modalContentOffset + 'px'
+				}); 
+			}
+
+			if((modalContentPosition.top + modalContentHeight) 
+				> (containerPosition.top + containerHeight)) {
+				modalContentOffset =  (containerPosition.top + containerHeight)
+										- (modalContentPosition.top + modalContentHeight);
+
+				$('.flight-detail-modal').css({
+					'margin-top'	: modalContentOffset + 'px'
+				}); 
+			}
+
+			if((modalContentWidth + modalContentPosition.left) < containerWidth) {
+				$('.flight-modal-wrapper').addClass('modal-right'); 
+
+				if($('.flight-modal-wrapper').hasClass('modal-left')){
+					$('.flight-modal-wrapper').removeClass('modal-left')
+				}
+
+
+				$('.flight-modal-wrapper').css({
+					'left'	: offsetLeft + 'px'
+				}); 
+			} else {
+				$('.flight-modal-wrapper').addClass('modal-left'); 
+				
+				if($('.flight-modal-wrapper').hasClass('modal-right')){
+					$('.flight-modal-wrapper').removeClass('modal-right')
+				}
+
+				$('.flight-modal-wrapper').css({
+					'left'	: cardPosition.left + 'px'
+				}); 
+			}
+		};	  		    
+
+		function closeModal() {
+			$('.flight-modal-overlay').removeClass('is-active');
+
+			$('.flight-modal-wrapper')
+				.removeClass('modal-left modal-right').empty();
+		}	 
+
+		function bookFlight() {
+			var selectedFlight = $('.flight-card.is-focus');
+			var selectedDate = selectedFlight.val('date');
+			var flightHour = selectedFlight.parent().index();
+			var totalHour = selectedFlight.parents('.hour-list').find('li').length;
+			var cellHeight = 0;
+			var cellOffset = 3;
+			var cellSpan = 5;
+
+			selectedFlight.removeClass('is-focus').addClass('is-selected');
+			selectedFlight
+				.parents('.day-item').addClass('is-selected')
+				.find('.flight-card').not(selectedFlight).css('display', 'none');
+
+
+			cellHeight = selectedFlight.height();
+			selectedFlightOffset = totalHour - flightHour;
+
+			if (selectedFlightOffset < cellSpan ) {
+				selectedFlight.css('margin-top', -(cellHeight - (selectedFlightOffset / cellSpan * cellHeight) + cellOffset) + 'px');
+			}
+
+		    closeModal();  
+		} 
+	});
