@@ -2608,7 +2608,20 @@ select.form-control {
   .destination-filter .form-inline {
     padding: 15px 15px 5px; }
   .destination-filter .form-group {
-    margin-bottom: 10px; }
+    float: left;
+    margin-bottom: 10px;
+    padding: 0 3px; }
+    .destination-filter .form-group select,
+    .destination-filter .form-group input,
+    .destination-filter .form-group button {
+      width: 100%; }
+  .destination-filter .form-group__input-city,
+  .destination-filter .form-group__input-date {
+    width: 20%; }
+  .destination-filter .form-group__btn-exchange {
+    width: 5%; }
+  .destination-filter .form-group__btn-submit {
+    width: 15%; }
   .destination-filter .cta-wrapper {
     text-align: center;
     padding-left: 90px; }
@@ -2786,13 +2799,25 @@ select.form-control {
     background: rgba(0, 0, 0, 0.15);
     z-index: 3; }
   .time-table .time-slider-title {
-    margin: 5px 0;
+    position: relative;
+    margin: 0 0 10px;
+    padding: 8px 0;
     text-transform: uppercase;
     color: lightgray;
     letter-spacing: 0.1em;
     font-size: 1.4rem;
     text-align: center;
     height: 16px; }
+    .time-table .time-slider-title::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%);
+      background-image: url("../images/icons/bg-time-table-header.png");
+      width: 9em;
+      height: 2.3em;
+      background-size: 100% 100%; }
   .time-table .day-list-wrapper {
     position: relative;
     height: calc(100% - 66px); }
@@ -2938,6 +2963,12 @@ select.form-control {
       padding: 0; }
       .time-table .flight-card.is-selected .flight-info::after {
         display: none; }
+    .time-table .flight-card.is-selected .flight-departure,
+    .time-table .flight-card.is-selected .flight-arrival {
+      padding-left: 0px;
+      margin: 0px 6px; }
+    .time-table .flight-card.is-selected .flight-departure {
+      border-bottom: 1px dashed #848484; }
     .time-table .flight-card.is-selected .flight-time {
       display: block;
       color: black;
@@ -2946,16 +2977,19 @@ select.form-control {
       font-size: 1.3em; }
     .time-table .flight-card.is-selected .flight-airport {
       font-size: 0.9em;
-      display: inline-block; }
+      display: inline-block;
+      line-height: 1.2; }
     .time-table .flight-card.is-selected .airport-code {
       display: none; }
     .time-table .flight-card.is-selected .flight-code {
       display: block;
       position: absolute;
-      left: 5px; }
+      left: 5px;
+      line-height: 29px; }
     .time-table .flight-card.is-selected .flight-cost {
       margin-right: 3px;
-      height: auto; }
+      height: auto;
+      line-height: 29px; }
   .time-table .time-ruler-list-wrapper > .nano-pane,
   .time-table .time-slider:not(:last-child) .day-list-wrapper > .nano-pane {
     opacity: 0; }

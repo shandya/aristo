@@ -9,9 +9,15 @@ script(src='../assets/javascripts/site.min.js')
 
 script.
 	$(function() {
-		$(".nano").nanoScroller();
+		$('.nano').nanoScroller();
 
-		$( ".js-jquery-datepicker" ).datepicker();
+		$('body').on('focus',".js-jquery-datepicker", function(){
+
+		    if( $(this).hasClass('hasDatepicker') === false )  {
+		        $(this).datepicker();
+		    }
+
+		});
 
 		$('#js-hotel-carousel').slick({
 			dots: false,

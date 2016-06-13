@@ -26,7 +26,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="" data-toggle="modal" data-target="#modal-meeting">
-	        		<img src="../assets/images/icons/icon-meeting__blue.svg" alt="" class="icon-menu"> Meetings
+	        		<img src="../assets/images/icons/icon-meeting__blue.png" alt="" class="icon-menu"> Meetings
 	        	</a>
 	        </li>
 
@@ -56,9 +56,15 @@
 </header><footer class="footer">
 
 </footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')</script><script src="../assets/javascripts/vendors/jquery-ui.min.js"></script><script src="../assets/javascripts/vendors/jquery.nanoscroller.min.js"></script><script src="../assets/javascripts/vendors/bootstrap.min.js"></script><script src="../assets/javascripts/vendors/slick/slick.min.js"></script><script src="../assets/javascripts/site.min.js"></script><script>$(function() {
-	$(".nano").nanoScroller();
+	$('.nano').nanoScroller();
 
-	$( ".js-jquery-datepicker" ).datepicker();
+	$('body').on('focus',".js-jquery-datepicker", function(){
+
+	    if( $(this).hasClass('hasDatepicker') === false )  {
+	        $(this).datepicker();
+	    }
+
+	});
 
 	$('#js-hotel-carousel').slick({
 		dots: false,

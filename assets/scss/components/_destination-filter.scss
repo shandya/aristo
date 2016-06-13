@@ -7,7 +7,28 @@
 	}
 
 	.form-group {
+		float: left;
 		margin-bottom: 10px;
+		padding: 0 3px;
+
+		select,
+		input,
+		button {
+			width: 100%;
+		}
+	}
+
+	.form-group__input-city,
+	.form-group__input-date {
+		width: 20%;
+	}
+
+	.form-group__btn-exchange {
+		width: 5%;
+	}
+
+	.form-group__btn-submit {
+		width: 15%;
 	}
 
 	.cta-wrapper {

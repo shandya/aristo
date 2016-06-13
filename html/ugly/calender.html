@@ -26,7 +26,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	        <li>
 	        	<a href="" data-toggle="modal" data-target="#modal-meeting">
-	        		<img src="../assets/images/icons/icon-meeting__blue.svg" alt="" class="icon-menu"> Meetings
+	        		<img src="../assets/images/icons/icon-meeting__blue.png" alt="" class="icon-menu"> Meetings
 	        	</a>
 	        </li>
 
@@ -55,7 +55,43 @@
 	</nav>
 </header><div class="page__calender"><div class="page-content"><section class="destination-filter">
 	<form class="form-inline destination-group-wrapper">
-
+		<div class="destination-group clearfix">
+			<div class="form-group form-group__input-city">
+				<div class="select-wrapper select-wrapper__departure">
+					<select class="form-control" id="">
+						<option value="" disabled selected style="display: none;">Departure City</option>
+						<option value="">Jakarta, Indonesia</option>
+						<option value="">Bandung, Indonesia</option>
+						<option value="">Bali, Indonesia</option>
+					</select> 
+				</div>
+			</div>
+			<div class="form-group form-group__input-city">
+				<div class="select-wrapper select-wrapper__return">
+					<select class="form-control" id="">
+						<option value="" disabled selected style="display: none;">Return City</option>
+						<option value="">Singapore</option>
+						<option value="">Kuala Lumpur, Malaysia</option>
+					</select> 
+				</div>
+			</div>
+			<div class="form-group form-group__input-date">
+				<div class="date-wrapper">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Departure Date">
+				</div>
+			</div>
+			<div class="form-group form-group__input-date">
+				<div class="date-wrapper">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Return Date">
+				</div>
+			</div>
+			<div class="form-group form-group__btn-exchange">
+				<button type="" class="btn btn-aristo btn-aristo__gray"><i class="fa fa-exchange" aria-hidden="true"></i><span class="sr-only">Exchange</span>
+			</div>
+			<div class="form-group form-group__btn-submit">
+				<button type="submit" class="btn btn-aristo btn-aristo__orange">Search</button>
+			</div>
+		</div>	
 	</form>
 
 	<div class="cta-wrapper">
@@ -64,10 +100,10 @@
 
 
 	<div class="hidden js-destination-group-template">
-		<div class="destination-group">
-			<div class="form-group">
+		<div class="destination-group clearfix">
+			<div class="form-group form-group__input-city">
 				<div class="select-wrapper select-wrapper__departure">
-					<select class="form-control" id="inputDeparture">
+					<select class="form-control" id="">
 						<option value="" disabled selected style="display: none;">Departure City</option>
 						<option value="">Jakarta, Indonesia</option>
 						<option value="">Bandung, Indonesia</option>
@@ -75,29 +111,29 @@
 					</select> 
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-city">
 				<div class="select-wrapper select-wrapper__return">
-					<select class="form-control" id="inputReturn">
+					<select class="form-control" id="">
 						<option value="" disabled selected style="display: none;">Return City</option>
 						<option value="">Singapore</option>
 						<option value="">Kuala Lumpur, Malaysia</option>
 					</select> 
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-date">
 				<div class="date-wrapper">
-					<input type="text" class="form-control js-jquery-datepicker" id="inputDepartureDate" placeholder="Departure Date">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Departure Date">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-date">
 				<div class="date-wrapper">
-					<input type="text" class="form-control js-jquery-datepicker" id="inputReturnDate" placeholder="Return Date">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Return Date">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__btn-exchange">
 				<button type="" class="btn btn-aristo btn-aristo__gray"><i class="fa fa-exchange" aria-hidden="true"></i><span class="sr-only">Exchange</span>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__btn-submit">
 				<button type="submit" class="btn btn-aristo btn-aristo__orange">Search</button>
 			</div>
 		</div>		
@@ -845,7 +881,7 @@
 		</div>
 	</footer>
 </aside> </div><div id="modal-meeting" tabindex="-1" role="dialog" aria-labelledby="modal-meeting-label" class="modal fade"><div class="modal-dialog modal-aristo modal-aristo__select-meeting" role="document">
-	<img src="../assets/images/icons/icon-meeting__white.svg" alt="" class="modal-icon">
+	<img src="../assets/images/icons/icon-meeting__white.png" alt="" class="modal-icon">
 	<div class="modal-content">
 		<div class="modal-header">
 			<nav class="modal-action-nav">
@@ -887,15 +923,21 @@
 		</div>
 		<div class="modal-footer">
 			<button type="button" class="btn btn-aristo btn-aristo__thin btn-aristo__orange" data-dismiss="modal">Save</button>
-			<button type="button" class="btn btn-aristo btn-aristo__thin btn-aristo__white">Cancel</button>
+			<button type="button" class="btn btn-aristo btn-aristo__thin btn-aristo__white"  data-dismiss="modal">Cancel</button>
 		</div>
 	</div>
 </div></div><footer class="footer">
 
 </footer><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>window.jQuery || document.write('<script src="../assets/javascripts/vendors/jquery-1.11.3.min.js"><\/script>')</script><script src="../assets/javascripts/vendors/jquery-ui.min.js"></script><script src="../assets/javascripts/vendors/jquery.nanoscroller.min.js"></script><script src="../assets/javascripts/vendors/bootstrap.min.js"></script><script src="../assets/javascripts/vendors/slick/slick.min.js"></script><script src="../assets/javascripts/site.min.js"></script><script>$(function() {
-	$(".nano").nanoScroller();
+	$('.nano').nanoScroller();
 
-	$( ".js-jquery-datepicker" ).datepicker();
+	$('body').on('focus',".js-jquery-datepicker", function(){
+
+	    if( $(this).hasClass('hasDatepicker') === false )  {
+	        $(this).datepicker();
+	    }
+
+	});
 
 	$('#js-hotel-carousel').slick({
 		dots: false,

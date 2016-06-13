@@ -1,6 +1,42 @@
 <section class="destination-filter">
 	<form class="form-inline destination-group-wrapper">
-
+		<div class="destination-group clearfix">
+			<div class="form-group form-group__input-city">
+				<div class="select-wrapper select-wrapper__departure">
+					<select class="form-control" id="">
+						<option value="" disabled selected style="display: none;">Departure City</option>
+						<option value="">Jakarta, Indonesia</option>
+						<option value="">Bandung, Indonesia</option>
+						<option value="">Bali, Indonesia</option>
+					</select> 
+				</div>
+			</div>
+			<div class="form-group form-group__input-city">
+				<div class="select-wrapper select-wrapper__return">
+					<select class="form-control" id="">
+						<option value="" disabled selected style="display: none;">Return City</option>
+						<option value="">Singapore</option>
+						<option value="">Kuala Lumpur, Malaysia</option>
+					</select> 
+				</div>
+			</div>
+			<div class="form-group form-group__input-date">
+				<div class="date-wrapper">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Departure Date">
+				</div>
+			</div>
+			<div class="form-group form-group__input-date">
+				<div class="date-wrapper">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Return Date">
+				</div>
+			</div>
+			<div class="form-group form-group__btn-exchange">
+				<button type="" class="btn btn-aristo btn-aristo__gray"><i class="fa fa-exchange" aria-hidden="true"></i><span class="sr-only">Exchange</span>
+			</div>
+			<div class="form-group form-group__btn-submit">
+				<button type="submit" class="btn btn-aristo btn-aristo__orange">Search</button>
+			</div>
+		</div>	
 	</form>
 
 	<div class="cta-wrapper">
@@ -9,10 +45,10 @@
 
 
 	<div class="hidden js-destination-group-template">
-		<div class="destination-group">
-			<div class="form-group">
+		<div class="destination-group clearfix">
+			<div class="form-group form-group__input-city">
 				<div class="select-wrapper select-wrapper__departure">
-					<select class="form-control" id="inputDeparture">
+					<select class="form-control" id="">
 						<option value="" disabled selected style="display: none;">Departure City</option>
 						<option value="">Jakarta, Indonesia</option>
 						<option value="">Bandung, Indonesia</option>
@@ -20,29 +56,29 @@
 					</select> 
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-city">
 				<div class="select-wrapper select-wrapper__return">
-					<select class="form-control" id="inputReturn">
+					<select class="form-control" id="">
 						<option value="" disabled selected style="display: none;">Return City</option>
 						<option value="">Singapore</option>
 						<option value="">Kuala Lumpur, Malaysia</option>
 					</select> 
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-date">
 				<div class="date-wrapper">
-					<input type="text" class="form-control js-jquery-datepicker" id="inputDepartureDate" placeholder="Departure Date">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Departure Date">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__input-date">
 				<div class="date-wrapper">
-					<input type="text" class="form-control js-jquery-datepicker" id="inputReturnDate" placeholder="Return Date">
+					<input type="text" class="form-control js-jquery-datepicker" id="" placeholder="Return Date">
 				</div>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__btn-exchange">
 				<button type="" class="btn btn-aristo btn-aristo__gray"><i class="fa fa-exchange" aria-hidden="true"></i><span class="sr-only">Exchange</span>
 			</div>
-			<div class="form-group">
+			<div class="form-group form-group__btn-submit">
 				<button type="submit" class="btn btn-aristo btn-aristo__orange">Search</button>
 			</div>
 		</div>		
